@@ -1,6 +1,11 @@
-import "@/styles/globals.css";
+import React from "react";
 import type { AppProps } from "next/app";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
+import Head from "next/head";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return(<Component {...pageProps} />);
 }
+
+export default MyApp;

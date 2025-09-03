@@ -40,3 +40,251 @@ a {
     color-scheme: dark;
   }
 }
+
+@font-face {
+  font-family: "Gordon W01 Black";
+  src: url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.eot");
+  src: url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/d6334bc8ac954270190af4dc9f1c4314.svg#Gordon W01 Black") format("svg");
+}
+
+@font-face {
+    font-family: "CS Gordon";
+    src: url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.eot");
+    src: url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3c176d84772f2a84ac5031eee432b0ea.svg#CS Gordon")format("svg");
+}
+
+@font-face {
+  font-family: "Versus-Ultra";
+  src: url("/fonts/Versus-W05-Ultra.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-navbar {
+  background-color: #000000 !important;
+  padding: 2rem 0 !important;
+  border-bottom: 1px solid #ffffff;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-family: "wedding-gothic-atf", "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transform: scaleX(2);
+  margin-bottom: 3rem;
+}
+
+.navbar-links {
+  font-family: "Roboto Mono", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.navbar-links .nav-link {    /* necessário para o ::after */
+  color: #ffffff;
+  padding: 0 1rem;           /* espaço interno do link */
+  text-align: center;
+  white-space: nowrap;
+  margin-inline: 2.5rem;
+}
+
+.nav-separator {
+  width: 1px;              
+  height: 35px; /* altura fixa visível */
+  background-color: #ffffff;
+}
+
+.carousel-caption h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.caption-centralizada {
+  bottom: unset !important; /* remove o bottom do bootstrap */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 1) Overlay mais suave/bonito */
+.card-dark-overlay {
+  position: relative;
+  overflow: hidden;
+  min-height: 900px;
+  border: none;
+  color: white;
+}
+
+/* background do card */
+.card-dark-overlay .card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* overlay gradiente */
+.card-dark-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.28) 0%,
+    rgba(0,0,0,.55) 40%,
+    rgba(0,0,0,.55) 60%,
+    rgba(0,0,0,.28) 100%
+  );
+  z-index: 1;
+}
+
+/* corpo interno */
+.card-dark-overlay .card-grid-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* move para o topo */
+  padding-top: 2rem;           /* ajusta a distância do topo */
+  margin-top: 0;               /* remove margem negativa que empurra pra baixo */
+  padding: 3rem 1rem 1rem;
+  transform: scale(1.5);
+  transform-origin: top center;
+  text-align: center;
+}
+
+/* container de texto */
+.card-dark-overlay .card-text-container {
+  max-width: 60%;
+  margin-bottom: 1.3rem;
+}
+
+/* título */
+.card-dark-overlay .card-title-custom {
+  margin-bottom: 1rem;
+  font-size: 22px;
+  font-weight: 400;
+  transform: scaleX(1.2);
+  font-family: 'Versus-Ultra', Roboto, Arial, sans-serif !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+}
+
+/* parágrafo */
+.card-dark-overlay .card-text-custom {
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,.9);
+  font-size: 17px;
+  font-weight: 300;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.2;
+  text-shadow: 0 1px 10px rgba(0,0,0,.25);
+}
+
+/* ícone */
+.card-dark-overlay .card-grid-inner svg {
+  width: clamp(60px, 6vw, 85px);
+  height: clamp(60px, 6vw, 85px);
+  margin-bottom: 1rem;
+  color: #F2C94C;
+}
+
+/* botão */
+.card-dark-overlay .btn-primary {
+  background-color: #fff !important;
+  color: #111 !important;
+  border: none;
+  border-radius: 999px;
+  padding: .55rem 1.2rem;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: 'Roboto-Bold', Roboto, Arial, sans-serif;
+  text-transform: uppercase;
+  width: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,.22);
+}
+
+.card-dark-overlay .btn-primary:hover,
+.card-dark-overlay .btn-primary:focus {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1.5px solid #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,.28);
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .card-dark-overlay {
+    min-height: 260px !important;
+  }
+
+  .card-dark-overlay .card-grid-inner {
+    padding-top: 0.5rem;
+  }
+
+  .card-dark-overlay .card-grid-inner svg {
+    width: clamp(25px, 3vw, 38px);
+    height: clamp(35px, 3vw, 38px);
+    margin-bottom: 0;
+  }
+
+  .card-dark-overlay .card-title-custom {
+    font-size: 6px;
+    margin-bottom: 0.3rem;
+  }
+
+  .card-dark-overlay .card-text-custom {
+    font-size: 6px !important;
+    margin-bottom: 0.3rem;
+  }
+
+  .card-dark-overlay .btn-primary {
+    padding: .20rem 0.4rem;
+    font-size: 4px;
+  }
+
+  .card-dark-overlay .card-text-container {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.banner-voluntarios {
+  text-align: center;
+  color: white;
+  padding: 3rem 1rem; /* equivale ao py-5 */
+  background-size: cover;
+  background-position: center;
+}
