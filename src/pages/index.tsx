@@ -141,7 +141,7 @@ export default function Home() {
         className="banner-voluntarios"
         style={{ backgroundImage: `url(${voluntarios.src})` }}
       >
-        <h2>FAÇA PARTE DO NOSSO TIME DE VOLUNTÁRIOS!</h2>
+        <h2>FAÇA PARTE DO NOSSO <br /> TIME DE VOLUNTÁRIOS!</h2>
         <Button variant="warning" className="mt-3">QUERO FAZER PARTE!</Button>
       </div>
 

@@ -282,9 +282,54 @@ a {
 }
 
 .banner-voluntarios {
+  position: relative;
   text-align: center;
   color: white;
-  padding: 3rem 1rem; /* equivale ao py-5 */
+  height: 60rem;              /* altura fixa */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-size: cover;
   background-position: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* aplica a fonte só ao texto do banner */
+.banner-voluntarios h2,
+.banner-voluntarios p,
+.banner-voluntarios span {
+  font-size: 54px;
+  font-family: 'Versus-Ultra', Roboto, Arial, sans-serif !important;
+  margin-top: 15.6rem;
+  margin-bottom: 5rem;
+}
+
+/* aplica outra fonte só ao botão */
+.banner-voluntarios .btn {
+  font-size: 18px;
+  font-family: 'Versus-Ultra', Roboto, Arial, sans-serif !important;
+  width: 20rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+}
+
+.banner-voluntarios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.28) 0%,
+    rgba(0,0,0,.55) 40%,
+    rgba(0,0,0,.55) 60%,
+    rgba(0,0,0,.28) 100%
+  );
+  z-index: 1;
+}
+
+/* mantém o conteúdo acima do overlay */
+.banner-voluntarios > * {
+  position: relative;
+  z-index: 2;
 }
